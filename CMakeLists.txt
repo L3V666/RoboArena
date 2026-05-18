@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(RoboArena VERSION 0.4.0 LANGUAGES CXX)
+project(RoboArena VERSION 0.5.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -48,6 +48,7 @@ target_link_libraries(roboarena_entities PUBLIC sfml-graphics roboarena_math rob
 add_library(roboarena_systems
     src/systems/EntityManager.cpp
     src/systems/CombatSystem.cpp
+    src/systems/WaveSystem.cpp
 )
 
 target_include_directories(roboarena_systems PUBLIC include)

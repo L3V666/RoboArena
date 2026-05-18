@@ -327,6 +327,30 @@ src/entities/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.s
 .PHONY : src/entities/Player.cpp.s
 
+src/entities/PowerUp.o: src/entities/PowerUp.cpp.o
+.PHONY : src/entities/PowerUp.o
+
+# target to build an object file
+src/entities/PowerUp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o
+.PHONY : src/entities/PowerUp.cpp.o
+
+src/entities/PowerUp.i: src/entities/PowerUp.cpp.i
+.PHONY : src/entities/PowerUp.i
+
+# target to preprocess a source file
+src/entities/PowerUp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.i
+.PHONY : src/entities/PowerUp.cpp.i
+
+src/entities/PowerUp.s: src/entities/PowerUp.cpp.s
+.PHONY : src/entities/PowerUp.s
+
+# target to generate assembly for a file
+src/entities/PowerUp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.s
+.PHONY : src/entities/PowerUp.cpp.s
+
 src/entities/Projectile.o: src/entities/Projectile.cpp.o
 .PHONY : src/entities/Projectile.o
 
@@ -495,6 +519,54 @@ src/systems/Pathfinder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_pathfinding.dir/build.make CMakeFiles/roboarena_pathfinding.dir/src/systems/Pathfinder.cpp.s
 .PHONY : src/systems/Pathfinder.cpp.s
 
+src/systems/PickupSystem.o: src/systems/PickupSystem.cpp.o
+.PHONY : src/systems/PickupSystem.o
+
+# target to build an object file
+src/systems/PickupSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o
+.PHONY : src/systems/PickupSystem.cpp.o
+
+src/systems/PickupSystem.i: src/systems/PickupSystem.cpp.i
+.PHONY : src/systems/PickupSystem.i
+
+# target to preprocess a source file
+src/systems/PickupSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.i
+.PHONY : src/systems/PickupSystem.cpp.i
+
+src/systems/PickupSystem.s: src/systems/PickupSystem.cpp.s
+.PHONY : src/systems/PickupSystem.s
+
+# target to generate assembly for a file
+src/systems/PickupSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.s
+.PHONY : src/systems/PickupSystem.cpp.s
+
+src/systems/WaveSystem.o: src/systems/WaveSystem.cpp.o
+.PHONY : src/systems/WaveSystem.o
+
+# target to build an object file
+src/systems/WaveSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o
+.PHONY : src/systems/WaveSystem.cpp.o
+
+src/systems/WaveSystem.i: src/systems/WaveSystem.cpp.i
+.PHONY : src/systems/WaveSystem.i
+
+# target to preprocess a source file
+src/systems/WaveSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.i
+.PHONY : src/systems/WaveSystem.cpp.i
+
+src/systems/WaveSystem.s: src/systems/WaveSystem.cpp.s
+.PHONY : src/systems/WaveSystem.s
+
+# target to generate assembly for a file
+src/systems/WaveSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.s
+.PHONY : src/systems/WaveSystem.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -525,6 +597,9 @@ help:
 	@echo "... src/entities/Player.o"
 	@echo "... src/entities/Player.i"
 	@echo "... src/entities/Player.s"
+	@echo "... src/entities/PowerUp.o"
+	@echo "... src/entities/PowerUp.i"
+	@echo "... src/entities/PowerUp.s"
 	@echo "... src/entities/Projectile.o"
 	@echo "... src/entities/Projectile.i"
 	@echo "... src/entities/Projectile.s"
@@ -546,6 +621,12 @@ help:
 	@echo "... src/systems/Pathfinder.o"
 	@echo "... src/systems/Pathfinder.i"
 	@echo "... src/systems/Pathfinder.s"
+	@echo "... src/systems/PickupSystem.o"
+	@echo "... src/systems/PickupSystem.i"
+	@echo "... src/systems/PickupSystem.s"
+	@echo "... src/systems/WaveSystem.o"
+	@echo "... src/systems/WaveSystem.i"
+	@echo "... src/systems/WaveSystem.s"
 .PHONY : help
 
 

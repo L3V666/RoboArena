@@ -8,6 +8,8 @@
 
 namespace roboarena {
 
+void CombatSystem::reset() { playerHitTimer_ = 0.0F; }
+
 std::size_t CombatSystem::update(EntityManager& entityManager, Player& player,
                                  float deltaTime) {
     const std::size_t killedEnemies = handleProjectileHits(entityManager);

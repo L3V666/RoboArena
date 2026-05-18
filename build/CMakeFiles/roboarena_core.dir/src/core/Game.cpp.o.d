@@ -240,18 +240,12 @@ CMakeFiles/roboarena_core.dir/src/core/Game.cpp.o: \
  /usr/include/c++/15/backward/auto_ptr.h \
  /usr/include/c++/15/pstl/glue_memory_defs.h /usr/include/c++/15/utility \
  /usr/include/c++/15/bits/stl_relops.h \
- /home/l3v/repo/RoboArena/include/entities/ChaserEnemy.hpp \
- /home/l3v/repo/RoboArena/include/entities/Enemy.hpp \
- /home/l3v/repo/RoboArena/include/systems/Pathfinder.hpp \
- /usr/include/c++/15/functional /usr/include/c++/15/bits/std_function.h \
- /usr/include/c++/15/unordered_map \
- /usr/include/c++/15/bits/unordered_map.h \
- /usr/include/c++/15/bits/hashtable.h \
- /usr/include/c++/15/bits/hashtable_policy.h \
- /usr/include/c++/15/bits/enable_special_members.h \
- /usr/include/c++/15/array /usr/include/c++/15/compare \
+ /home/l3v/repo/RoboArena/include/systems/PickupSystem.hpp \
+ /home/l3v/repo/RoboArena/include/entities/PowerUp.hpp \
+ /home/l3v/repo/RoboArena/include/systems/WaveSystem.hpp \
  /home/l3v/repo/RoboArena/include/entities/Projectile.hpp \
  /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp \
+ /usr/include/c++/15/array /usr/include/c++/15/compare \
  /usr/include/c++/15/sstream /usr/include/c++/15/istream \
  /usr/include/c++/15/bits/istream.tcc \
  /usr/include/c++/15/bits/sstream.tcc

@@ -8,6 +8,7 @@
 #include "map/GridMap.hpp"
 #include "systems/CombatSystem.hpp"
 #include "systems/EntityManager.hpp"
+#include "systems/WaveSystem.hpp"
 
 namespace roboarena {
 
@@ -18,6 +19,8 @@ class Game final {
     void run();
 
    private:
+    enum class GameState { Playing, Victory, GameOver };
+
     static constexpr unsigned int kWindowWidth = 960;
     static constexpr unsigned int kWindowHeight = 640;
     static constexpr unsigned int kFrameLimit = 120;
@@ -26,17 +29,24 @@ class Game final {
     void processEvents();
     void update(float deltaTime);
     void render();
-    void createEntities();
+    void restart();
+    void createPlayer();
     void shootAt(sf::Vector2f targetPosition);
     void updateWindowTitle();
+    void drawHud();
+    void drawBar(sf::Vector2f position, sf::Vector2f size, float ratio,
+                 sf::Color fillColor);
+    [[nodiscard]] bool isPlaying() const;
 
     sf::RenderWindow window_;
     GridMap map_;
     EntityManager entityManager_;
     CombatSystem combatSystem_;
+    WaveSystem waveSystem_;
     Player* player_ = nullptr;
     std::size_t score_ = 0;
     float shootCooldown_ = 0.0F;
+    GameState state_ = GameState::Playing;
 };
 
 }  // namespace roboarena

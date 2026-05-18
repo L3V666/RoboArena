@@ -10,6 +10,7 @@ namespace roboarena {
 
 class CombatSystem final {
    public:
+    void reset();
     [[nodiscard]] std::size_t update(EntityManager& entityManager,
                                      Player& player, float deltaTime);
 

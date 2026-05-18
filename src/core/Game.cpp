@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <sstream>
 
-#include "entities/ChaserEnemy.hpp"
 #include "entities/Projectile.hpp"
 #include "math/VectorUtils.hpp"
 
@@ -13,7 +12,7 @@ Game::Game()
     : window_(sf::VideoMode(kWindowWidth, kWindowHeight), "RoboArena"),
       map_(30, 20, 32.0F) {
     window_.setFramerateLimit(kFrameLimit);
-    createEntities();
+    createPlayer();
     updateWindowTitle();
 }
 
@@ -37,9 +36,14 @@ void Game::processEvents() {
             window_.close();
         }
 
-        if (event.type == sf::Event::KeyPressed &&
-            event.key.code == sf::Keyboard::Escape) {
-            window_.close();
+        if (event.type == sf::Event::KeyPressed) {
+            if (event.key.code == sf::Keyboard::Escape) {
+                window_.close();
+            }
+
+            if (event.key.code == sf::Keyboard::R) {
+                restart();
+            }
         }
 
         if (event.type == sf::Event::MouseButtonPressed &&
@@ -58,14 +62,22 @@ void Game::update(float deltaTime) {
         return;
     }
 
-    if (player_->isDefeated()) {
+    if (!isPlaying()) {
         updateWindowTitle();
         return;
     }
 
+    waveSystem_.update(entityManager_, *player_, map_, deltaTime);
     entityManager_.updateAll(deltaTime);
     score_ += combatSystem_.update(entityManager_, *player_, deltaTime);
     entityManager_.removeDestroyed();
+
+    if (player_->isDefeated()) {
+        state_ = GameState::GameOver;
+    } else if (waveSystem_.isFinished(entityManager_)) {
+        state_ = GameState::Victory;
+    }
+
     updateWindowTitle();
 }
 
@@ -73,24 +85,31 @@ void Game::render() {
     window_.clear(sf::Color(18, 18, 24));
     map_.draw(window_);
     entityManager_.drawAll(window_);
+    drawHud();
     window_.display();
 }
 
-void Game::createEntities() {
+void Game::restart() {
+    entityManager_.clear();
+    combatSystem_.reset();
+    waveSystem_.reset();
+    player_ = nullptr;
+    score_ = 0;
+    shootCooldown_ = 0.0F;
+    state_ = GameState::Playing;
+    createPlayer();
+    updateWindowTitle();
+}
+
+void Game::createPlayer() {
     Player& player = entityManager_.create<Player>(sf::Vector2f{96.0F, 96.0F});
     player.setMap(&map_);
     player_ = &player;
-
-    entityManager_.create<ChaserEnemy>(sf::Vector2f{800.0F, 500.0F}, *player_,
-                                       map_);
-    entityManager_.create<ChaserEnemy>(sf::Vector2f{800.0F, 96.0F}, *player_,
-                                       map_);
-    entityManager_.create<ChaserEnemy>(sf::Vector2f{160.0F, 520.0F}, *player_,
-                                       map_);
 }
 
 void Game::shootAt(sf::Vector2f targetPosition) {
-    if (player_ == nullptr || player_->isDefeated() || shootCooldown_ > 0.0F) {
+    if (player_ == nullptr || !isPlaying() || player_->isDefeated() ||
+        shootCooldown_ > 0.0F) {
         return;
     }
 
@@ -112,13 +131,75 @@ void Game::updateWindowTitle() {
     std::ostringstream title;
     title << "RoboArena | HP: " << player_->getHealth() << '/'
           << player_->getMaxHealth() << " | Score: " << score_
+          << " | Wave: " << waveSystem_.getCurrentWaveNumber() << '/'
+          << waveSystem_.getTotalWaves()
+          << " | Spawned: " << waveSystem_.getSpawnedInCurrentWave() << '/'
+          << waveSystem_.getEnemiesInCurrentWave()
+          << " | Enemies: " << waveSystem_.getAliveEnemies(entityManager_)
           << " | Entities: " << entityManager_.size();
 
-    if (player_->isDefeated()) {
-        title << " | GAME OVER - press Esc";
+    if (state_ == GameState::GameOver) {
+        title << " | GAME OVER - press R to restart or Esc to exit";
+    }
+
+    if (state_ == GameState::Victory) {
+        title << " | VICTORY - press R to restart or Esc to exit";
     }
 
     window_.setTitle(title.str());
 }
+
+void Game::drawHud() {
+    if (player_ == nullptr) {
+        return;
+    }
+
+    sf::RectangleShape panel({360.0F, 70.0F});
+    panel.setPosition(10.0F, 10.0F);
+    panel.setFillColor(sf::Color(8, 10, 16, 190));
+    panel.setOutlineColor(sf::Color(110, 125, 155));
+    panel.setOutlineThickness(1.0F);
+    window_.draw(panel);
+
+    const float healthRatio = static_cast<float>(player_->getHealth()) /
+                              static_cast<float>(player_->getMaxHealth());
+    drawBar({24.0F, 25.0F}, {320.0F, 14.0F}, healthRatio,
+            sf::Color(80, 220, 105));
+    drawBar({24.0F, 48.0F}, {320.0F, 10.0F}, waveSystem_.getWaveProgress(),
+            sf::Color(95, 145, 255));
+
+    const float shootReadyRatio = 1.0F - shootCooldown_ / kShootCooldown;
+    drawBar({24.0F, 64.0F}, {320.0F, 6.0F}, shootReadyRatio,
+            sf::Color(255, 215, 95));
+
+    if (!isPlaying()) {
+        sf::RectangleShape overlay({static_cast<float>(kWindowWidth),
+                                    static_cast<float>(kWindowHeight)});
+        overlay.setPosition(0.0F, 0.0F);
+        overlay.setFillColor(state_ == GameState::Victory
+                                 ? sf::Color(40, 120, 80, 85)
+                                 : sf::Color(140, 35, 35, 85));
+        window_.draw(overlay);
+    }
+}
+
+void Game::drawBar(sf::Vector2f position, sf::Vector2f size, float ratio,
+                   sf::Color fillColor) {
+    const float clampedRatio = std::clamp(ratio, 0.0F, 1.0F);
+
+    sf::RectangleShape background(size);
+    background.setPosition(position);
+    background.setFillColor(sf::Color(35, 38, 48));
+    background.setOutlineColor(sf::Color(95, 105, 125));
+    background.setOutlineThickness(1.0F);
+    window_.draw(background);
+
+    sf::RectangleShape foreground({size.x * clampedRatio, size.y});
+    foreground.setPosition(position);
+    foreground.setFillColor(fillColor);
+    window_.draw(foreground);
+}
+
+bool Game::isPlaying() const { return state_ == GameState::Playing; }
 
 }  // namespace roboarena

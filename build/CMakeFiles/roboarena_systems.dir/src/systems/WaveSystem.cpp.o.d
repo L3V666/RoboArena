@@ -1,6 +1,7 @@
-CMakeFiles/RoboArena.dir/src/main.cpp.o: \
- /home/l3v/repo/RoboArena/src/main.cpp /usr/include/stdc-predef.h \
- /home/l3v/repo/RoboArena/include/core/Game.hpp \
+CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o: \
+ /home/l3v/repo/RoboArena/src/systems/WaveSystem.cpp \
+ /usr/include/stdc-predef.h \
+ /home/l3v/repo/RoboArena/include/systems/WaveSystem.hpp \
  /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
  /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
  /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
@@ -225,7 +226,6 @@ CMakeFiles/RoboArena.dir/src/main.cpp.o: \
  /home/l3v/repo/RoboArena/include/entities/Entity.hpp \
  /home/l3v/repo/RoboArena/include/map/GridMap.hpp \
  /home/l3v/repo/RoboArena/include/map/Tile.hpp \
- /home/l3v/repo/RoboArena/include/systems/CombatSystem.hpp \
  /home/l3v/repo/RoboArena/include/systems/EntityManager.hpp \
  /usr/include/c++/15/memory \
  /usr/include/c++/15/bits/stl_raw_storage_iter.h \
@@ -240,6 +240,13 @@ CMakeFiles/RoboArena.dir/src/main.cpp.o: \
  /usr/include/c++/15/backward/auto_ptr.h \
  /usr/include/c++/15/pstl/glue_memory_defs.h /usr/include/c++/15/utility \
  /usr/include/c++/15/bits/stl_relops.h \
- /home/l3v/repo/RoboArena/include/systems/PickupSystem.hpp \
- /home/l3v/repo/RoboArena/include/entities/PowerUp.hpp \
- /home/l3v/repo/RoboArena/include/systems/WaveSystem.hpp
+ /home/l3v/repo/RoboArena/include/entities/ChaserEnemy.hpp \
+ /home/l3v/repo/RoboArena/include/entities/Enemy.hpp \
+ /home/l3v/repo/RoboArena/include/systems/Pathfinder.hpp \
+ /usr/include/c++/15/functional /usr/include/c++/15/bits/std_function.h \
+ /usr/include/c++/15/unordered_map \
+ /usr/include/c++/15/bits/unordered_map.h \
+ /usr/include/c++/15/bits/hashtable.h \
+ /usr/include/c++/15/bits/hashtable_policy.h \
+ /usr/include/c++/15/bits/enable_special_members.h \
+ /usr/include/c++/15/array /usr/include/c++/15/compare

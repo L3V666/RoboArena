@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/l3v/repo/RoboArena/src/systems/CombatSystem.cpp" "CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o" "gcc" "CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o.d"
   "/home/l3v/repo/RoboArena/src/systems/EntityManager.cpp" "CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o" "gcc" "CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o.d"
+  "/home/l3v/repo/RoboArena/src/systems/PickupSystem.cpp" "CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o" "gcc" "CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o.d"
+  "/home/l3v/repo/RoboArena/src/systems/WaveSystem.cpp" "CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o" "gcc" "CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

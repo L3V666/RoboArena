@@ -100,19 +100,51 @@ CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/l3v/repo/RoboArena/src/systems/CombatSystem.cpp -o CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.s
 
+CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o: CMakeFiles/roboarena_systems.dir/flags.make
+CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o: /home/l3v/repo/RoboArena/src/systems/WaveSystem.cpp
+CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o: CMakeFiles/roboarena_systems.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o -MF CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o.d -o CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o -c /home/l3v/repo/RoboArena/src/systems/WaveSystem.cpp
+
+CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/l3v/repo/RoboArena/src/systems/WaveSystem.cpp > CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.i
+
+CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/l3v/repo/RoboArena/src/systems/WaveSystem.cpp -o CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.s
+
+CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o: CMakeFiles/roboarena_systems.dir/flags.make
+CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o: /home/l3v/repo/RoboArena/src/systems/PickupSystem.cpp
+CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o: CMakeFiles/roboarena_systems.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o -MF CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o.d -o CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o -c /home/l3v/repo/RoboArena/src/systems/PickupSystem.cpp
+
+CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/l3v/repo/RoboArena/src/systems/PickupSystem.cpp > CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.i
+
+CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/l3v/repo/RoboArena/src/systems/PickupSystem.cpp -o CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.s
+
 # Object files for target roboarena_systems
 roboarena_systems_OBJECTS = \
 "CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o" \
-"CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o"
+"CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o" \
+"CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o" \
+"CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o"
 
 # External object files for target roboarena_systems
 roboarena_systems_EXTERNAL_OBJECTS =
 
 libroboarena_systems.a: CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o
 libroboarena_systems.a: CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o
+libroboarena_systems.a: CMakeFiles/roboarena_systems.dir/src/systems/WaveSystem.cpp.o
+libroboarena_systems.a: CMakeFiles/roboarena_systems.dir/src/systems/PickupSystem.cpp.o
 libroboarena_systems.a: CMakeFiles/roboarena_systems.dir/build.make
 libroboarena_systems.a: CMakeFiles/roboarena_systems.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libroboarena_systems.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libroboarena_systems.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/roboarena_systems.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/roboarena_systems.dir/link.txt --verbose=$(VERBOSE)
 

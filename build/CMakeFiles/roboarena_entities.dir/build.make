@@ -142,13 +142,28 @@ CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/l3v/repo/RoboArena/src/entities/Projectile.cpp -o CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.s
 
+CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o: CMakeFiles/roboarena_entities.dir/flags.make
+CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o: /home/l3v/repo/RoboArena/src/entities/PowerUp.cpp
+CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o: CMakeFiles/roboarena_entities.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o -MF CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o.d -o CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o -c /home/l3v/repo/RoboArena/src/entities/PowerUp.cpp
+
+CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/l3v/repo/RoboArena/src/entities/PowerUp.cpp > CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.i
+
+CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/l3v/repo/RoboArena/src/entities/PowerUp.cpp -o CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.s
+
 # Object files for target roboarena_entities
 roboarena_entities_OBJECTS = \
 "CMakeFiles/roboarena_entities.dir/src/entities/Entity.cpp.o" \
 "CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.o" \
 "CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.o" \
 "CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o" \
-"CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.o"
+"CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.o" \
+"CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o"
 
 # External object files for target roboarena_entities
 roboarena_entities_EXTERNAL_OBJECTS =
@@ -158,9 +173,10 @@ libroboarena_entities.a: CMakeFiles/roboarena_entities.dir/src/entities/Player.c
 libroboarena_entities.a: CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.o
 libroboarena_entities.a: CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o
 libroboarena_entities.a: CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.o
+libroboarena_entities.a: CMakeFiles/roboarena_entities.dir/src/entities/PowerUp.cpp.o
 libroboarena_entities.a: CMakeFiles/roboarena_entities.dir/build.make
 libroboarena_entities.a: CMakeFiles/roboarena_entities.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libroboarena_entities.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libroboarena_entities.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/roboarena_entities.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/roboarena_entities.dir/link.txt --verbose=$(VERBOSE)
 
