@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(RoboArena VERSION 0.5.0 LANGUAGES CXX)
+project(RoboArena VERSION 0.7.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -40,6 +40,7 @@ add_library(roboarena_entities
     src/entities/Enemy.cpp
     src/entities/ChaserEnemy.cpp
     src/entities/Projectile.cpp
+    src/entities/PowerUp.cpp
 )
 
 target_include_directories(roboarena_entities PUBLIC include)
@@ -49,6 +50,7 @@ add_library(roboarena_systems
     src/systems/EntityManager.cpp
     src/systems/CombatSystem.cpp
     src/systems/WaveSystem.cpp
+    src/systems/PickupSystem.cpp
 )
 
 target_include_directories(roboarena_systems PUBLIC include)

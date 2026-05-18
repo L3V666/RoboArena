@@ -13,9 +13,13 @@ namespace roboarena {
 
 class WaveSystem final {
    public:
+    enum class Difficulty { Easy, Normal, Hard };
+
     WaveSystem();
 
     void reset();
+    void cycleDifficulty();
+    void setDifficulty(Difficulty difficulty);
     void update(EntityManager& entityManager, const Player& player,
                 const GridMap& map, float deltaTime);
 
@@ -27,6 +31,8 @@ class WaveSystem final {
     [[nodiscard]] std::size_t getAliveEnemies(
         EntityManager& entityManager) const;
     [[nodiscard]] float getWaveProgress() const;
+    [[nodiscard]] Difficulty getDifficulty() const;
+    [[nodiscard]] const char* getDifficultyName() const;
 
    private:
     struct WaveConfig final {
@@ -36,6 +42,7 @@ class WaveSystem final {
 
     static constexpr float kTimeBetweenWaves = 1.25F;
 
+    void configureWaves();
     void spawnEnemy(EntityManager& entityManager, const Player& player,
                     const GridMap& map);
     void advanceWaveIfCleared(EntityManager& entityManager);
@@ -44,6 +51,7 @@ class WaveSystem final {
 
     std::vector<WaveConfig> waves_;
     std::vector<sf::Vector2f> spawnPoints_;
+    Difficulty difficulty_ = Difficulty::Normal;
     std::size_t currentWaveIndex_ = 0;
     std::size_t spawnedInCurrentWave_ = 0;
     std::size_t nextSpawnPointIndex_ = 0;

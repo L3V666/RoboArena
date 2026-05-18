@@ -6,7 +6,7 @@
 namespace roboarena {
 
 class Entity {
-   public:
+public:
     virtual ~Entity();
 
     virtual void update(float deltaTime) = 0;
@@ -16,6 +16,6 @@ class Entity {
     [[nodiscard]] virtual bool shouldBeRemoved() const;
 };
 
-}  // namespace roboarena
+} // namespace roboarena
 
-#endif  // ROBOARENA_ENTITIES_ENTITY_HPP
+#endif // ROBOARENA_ENTITIES_ENTITY_HPP

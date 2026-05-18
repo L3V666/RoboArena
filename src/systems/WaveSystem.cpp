@@ -8,17 +8,36 @@
 namespace roboarena {
 
 WaveSystem::WaveSystem()
-    : waves_{WaveConfig{3U, 1.10F}, WaveConfig{5U, 0.90F},
-             WaveConfig{7U, 0.75F}, WaveConfig{10U, 0.60F}},
-      spawnPoints_{sf::Vector2f{816.0F, 496.0F}, sf::Vector2f{816.0F, 96.0F},
+    : spawnPoints_{sf::Vector2f{816.0F, 496.0F}, sf::Vector2f{816.0F, 96.0F},
                    sf::Vector2f{160.0F, 528.0F}, sf::Vector2f{496.0F, 560.0F}} {
+    configureWaves();
 }
 
 void WaveSystem::reset() {
+    configureWaves();
     currentWaveIndex_ = 0;
     spawnedInCurrentWave_ = 0;
     nextSpawnPointIndex_ = 0;
     spawnTimer_ = 0.0F;
+}
+
+void WaveSystem::cycleDifficulty() {
+    switch (difficulty_) {
+        case Difficulty::Easy:
+            setDifficulty(Difficulty::Normal);
+            break;
+        case Difficulty::Normal:
+            setDifficulty(Difficulty::Hard);
+            break;
+        case Difficulty::Hard:
+            setDifficulty(Difficulty::Easy);
+            break;
+    }
+}
+
+void WaveSystem::setDifficulty(Difficulty difficulty) {
+    difficulty_ = difficulty;
+    reset();
 }
 
 void WaveSystem::update(EntityManager& entityManager, const Player& player,
@@ -93,6 +112,38 @@ float WaveSystem::getWaveProgress() const {
 
     return static_cast<float>(spawnedInCurrentWave_) /
            static_cast<float>(enemyCount);
+}
+
+WaveSystem::Difficulty WaveSystem::getDifficulty() const { return difficulty_; }
+
+const char* WaveSystem::getDifficultyName() const {
+    switch (difficulty_) {
+        case Difficulty::Easy:
+            return "Easy";
+        case Difficulty::Normal:
+            return "Normal";
+        case Difficulty::Hard:
+            return "Hard";
+    }
+
+    return "Unknown";
+}
+
+void WaveSystem::configureWaves() {
+    switch (difficulty_) {
+        case Difficulty::Easy:
+            waves_ = {WaveConfig{3U, 1.25F}, WaveConfig{4U, 1.05F},
+                      WaveConfig{5U, 0.90F}, WaveConfig{7U, 0.75F}};
+            break;
+        case Difficulty::Normal:
+            waves_ = {WaveConfig{3U, 1.10F}, WaveConfig{5U, 0.90F},
+                      WaveConfig{7U, 0.75F}, WaveConfig{10U, 0.60F}};
+            break;
+        case Difficulty::Hard:
+            waves_ = {WaveConfig{4U, 0.85F}, WaveConfig{7U, 0.70F},
+                      WaveConfig{10U, 0.55F}, WaveConfig{14U, 0.45F}};
+            break;
+    }
 }
 
 void WaveSystem::spawnEnemy(EntityManager& entityManager, const Player& player,

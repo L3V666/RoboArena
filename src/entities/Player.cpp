@@ -17,6 +17,8 @@ Player::Player(sf::Vector2f startPosition) {
 }
 
 void Player::update(float deltaTime) {
+    updatePowerUps(deltaTime);
+
     if (isDefeated()) {
         return;
     }
@@ -34,6 +36,21 @@ void Player::takeDamage(int damage) {
     health_ = std::max(0, health_ - std::max(0, damage));
 }
 
+void Player::heal(int amount) {
+    health_ = std::min(kMaxHealth, health_ + std::max(0, amount));
+}
+
+void Player::activateSpeedBoost(float duration, float multiplier) {
+    speedBoostDuration_ = std::max(0.1F, duration);
+    speedBoostTimer_ = speedBoostDuration_;
+    speedBoostMultiplier_ = std::max(1.0F, multiplier);
+}
+
+void Player::activateRapidFire(float duration) {
+    rapidFireDuration_ = std::max(0.1F, duration);
+    rapidFireTimer_ = rapidFireDuration_;
+}
+
 sf::Vector2f Player::getPosition() const { return shape_.getPosition(); }
 
 int Player::getHealth() const { return health_; }
@@ -41,6 +58,27 @@ int Player::getHealth() const { return health_; }
 int Player::getMaxHealth() const { return kMaxHealth; }
 
 bool Player::isDefeated() const { return health_ <= 0; }
+
+float Player::getShootCooldownMultiplier() const {
+    return rapidFireTimer_ > 0.0F ? kRapidFireCooldownMultiplier : 1.0F;
+}
+
+float Player::getSpeedBoostRatio() const {
+    return std::clamp(speedBoostTimer_ / speedBoostDuration_, 0.0F, 1.0F);
+}
+
+float Player::getRapidFireRatio() const {
+    return std::clamp(rapidFireTimer_ / rapidFireDuration_, 0.0F, 1.0F);
+}
+
+void Player::updatePowerUps(float deltaTime) {
+    speedBoostTimer_ = std::max(0.0F, speedBoostTimer_ - deltaTime);
+    rapidFireTimer_ = std::max(0.0F, rapidFireTimer_ - deltaTime);
+
+    if (speedBoostTimer_ <= 0.0F) {
+        speedBoostMultiplier_ = 1.0F;
+    }
+}
 
 void Player::handleMovement(float deltaTime) {
     sf::Vector2f direction{0.0F, 0.0F};
@@ -63,13 +101,15 @@ void Player::handleMovement(float deltaTime) {
     }
 
     direction = math::normalized(direction);
-    const sf::Vector2f offset = direction * kSpeed * deltaTime;
+    const sf::Vector2f offset = direction * getCurrentSpeed() * deltaTime;
     const sf::Vector2f nextPosition = shape_.getPosition() + offset;
 
     if (canMoveTo(nextPosition)) {
         shape_.move(offset);
     }
 }
+
+float Player::getCurrentSpeed() const { return kSpeed * speedBoostMultiplier_; }
 
 bool Player::canMoveTo(sf::Vector2f nextPosition) const {
     if (map_ == nullptr) {
