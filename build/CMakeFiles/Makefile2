@@ -196,9 +196,9 @@ CMakeFiles/roboarena_pathfinding.dir/clean:
 # Target rules for target CMakeFiles/roboarena_entities.dir
 
 # All Build rule for target.
+CMakeFiles/roboarena_entities.dir/all: CMakeFiles/roboarena_pathfinding.dir/all
 CMakeFiles/roboarena_entities.dir/all: CMakeFiles/roboarena_math.dir/all
 CMakeFiles/roboarena_entities.dir/all: CMakeFiles/roboarena_map.dir/all
-CMakeFiles/roboarena_entities.dir/all: CMakeFiles/roboarena_pathfinding.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=5,6,7,8,9,10,11 "Built target roboarena_entities"
@@ -230,10 +230,10 @@ CMakeFiles/roboarena_entities.dir/clean:
 # Target rules for target CMakeFiles/roboarena_systems.dir
 
 # All Build rule for target.
-CMakeFiles/roboarena_systems.dir/all: CMakeFiles/roboarena_math.dir/all
-CMakeFiles/roboarena_systems.dir/all: CMakeFiles/roboarena_map.dir/all
 CMakeFiles/roboarena_systems.dir/all: CMakeFiles/roboarena_pathfinding.dir/all
 CMakeFiles/roboarena_systems.dir/all: CMakeFiles/roboarena_entities.dir/all
+CMakeFiles/roboarena_systems.dir/all: CMakeFiles/roboarena_math.dir/all
+CMakeFiles/roboarena_systems.dir/all: CMakeFiles/roboarena_map.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=18,19,20,21,22 "Built target roboarena_systems"
@@ -265,11 +265,11 @@ CMakeFiles/roboarena_systems.dir/clean:
 # Target rules for target CMakeFiles/roboarena_core.dir
 
 # All Build rule for target.
-CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_math.dir/all
-CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_map.dir/all
 CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_pathfinding.dir/all
 CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_entities.dir/all
 CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_systems.dir/all
+CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_math.dir/all
+CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_map.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_core.dir/build.make CMakeFiles/roboarena_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_core.dir/build.make CMakeFiles/roboarena_core.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=3,4 "Built target roboarena_core"
@@ -301,12 +301,12 @@ CMakeFiles/roboarena_core.dir/clean:
 # Target rules for target CMakeFiles/RoboArena.dir
 
 # All Build rule for target.
-CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_math.dir/all
-CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_map.dir/all
 CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_pathfinding.dir/all
 CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_entities.dir/all
 CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_systems.dir/all
 CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_core.dir/all
+CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_math.dir/all
+CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_map.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RoboArena.dir/build.make CMakeFiles/RoboArena.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RoboArena.dir/build.make CMakeFiles/RoboArena.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=1,2 "Built target RoboArena"

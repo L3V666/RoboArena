@@ -1,3 +1,11 @@
 build/
 cmake-build-*/
-*.clang-format
+
+.clang-format
+
+.idea/
+.vscode/
+
+*.o
+*.a
+*.so

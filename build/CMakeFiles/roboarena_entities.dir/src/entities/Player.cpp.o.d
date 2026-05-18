@@ -224,6 +224,6 @@ CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.o: \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
  /home/l3v/repo/RoboArena/include/entities/Entity.hpp \
  /home/l3v/repo/RoboArena/include/map/GridMap.hpp \
- /home/l3v/repo/RoboArena/include/map/Tile.hpp \
- /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp \
- /usr/include/c++/15/array /usr/include/c++/15/compare
+ /home/l3v/repo/RoboArena/include/map/Tile.hpp /usr/include/c++/15/array \
+ /usr/include/c++/15/compare \
+ /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp

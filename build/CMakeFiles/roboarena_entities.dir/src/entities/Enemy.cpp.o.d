@@ -224,11 +224,10 @@ CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.o: \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
  /home/l3v/repo/RoboArena/include/entities/Entity.hpp \
  /home/l3v/repo/RoboArena/include/map/GridMap.hpp \
- /home/l3v/repo/RoboArena/include/map/Tile.hpp \
- /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp \
- /usr/include/c++/15/array /usr/include/c++/15/compare \
- /usr/include/c++/15/cmath /usr/include/math.h \
- /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /home/l3v/repo/RoboArena/include/map/Tile.hpp /usr/include/c++/15/array \
+ /usr/include/c++/15/compare /usr/include/c++/15/cmath \
+ /usr/include/math.h /usr/include/bits/math-vector.h \
+ /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
  /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
  /usr/include/bits/mathcalls-helper-functions.h \
@@ -245,4 +244,5 @@ CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.o: \
  /usr/include/c++/15/tr1/modified_bessel_func.tcc \
  /usr/include/c++/15/tr1/poly_hermite.tcc \
  /usr/include/c++/15/tr1/poly_laguerre.tcc \
- /usr/include/c++/15/tr1/riemann_zeta.tcc
+ /usr/include/c++/15/tr1/riemann_zeta.tcc \
+ /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp

@@ -243,9 +243,9 @@ CMakeFiles/roboarena_core.dir/src/core/Game.cpp.o: \
  /home/l3v/repo/RoboArena/include/systems/PickupSystem.hpp \
  /home/l3v/repo/RoboArena/include/entities/PowerUp.hpp \
  /home/l3v/repo/RoboArena/include/systems/WaveSystem.hpp \
- /home/l3v/repo/RoboArena/include/entities/Projectile.hpp \
- /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp \
  /usr/include/c++/15/array /usr/include/c++/15/compare \
  /usr/include/c++/15/sstream /usr/include/c++/15/istream \
  /usr/include/c++/15/bits/istream.tcc \
- /usr/include/c++/15/bits/sstream.tcc
+ /usr/include/c++/15/bits/sstream.tcc \
+ /home/l3v/repo/RoboArena/include/entities/Projectile.hpp \
+ /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp
