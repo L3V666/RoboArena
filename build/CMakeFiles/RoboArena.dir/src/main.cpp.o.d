@@ -225,6 +225,7 @@ CMakeFiles/RoboArena.dir/src/main.cpp.o: \
  /home/l3v/repo/RoboArena/include/entities/Entity.hpp \
  /home/l3v/repo/RoboArena/include/map/GridMap.hpp \
  /home/l3v/repo/RoboArena/include/map/Tile.hpp \
+ /home/l3v/repo/RoboArena/include/systems/CombatSystem.hpp \
  /home/l3v/repo/RoboArena/include/systems/EntityManager.hpp \
  /usr/include/c++/15/memory \
  /usr/include/c++/15/bits/stl_raw_storage_iter.h \

@@ -6,7 +6,8 @@ namespace roboarena {
 
 ChaserEnemy::ChaserEnemy(sf::Vector2f startPosition, const Player& target,
                          const GridMap& map)
-    : Enemy(startPosition, map, kRadius, kSpeed, sf::Color(235, 85, 85)),
+    : Enemy(startPosition, map, kRadius, kSpeed, kHealth,
+            sf::Color(235, 85, 85)),
       target_(target),
       map_(map),
       pathfinder_(map) {}
@@ -32,7 +33,6 @@ sf::Vector2f ChaserEnemy::getDesiredDirection() const {
 sf::Vector2f ChaserEnemy::getNextWaypoint() const {
     const sf::Vector2i enemyCell = map_.worldToCell(getPosition());
     const sf::Vector2i targetCell = map_.worldToCell(target_.getPosition());
-
     currentPath_ = pathfinder_.findPath(enemyCell, targetCell);
 
     if (currentPath_.empty()) {

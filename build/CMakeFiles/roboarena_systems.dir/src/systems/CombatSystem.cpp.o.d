@@ -1,11 +1,8 @@
-CMakeFiles/roboarena_core.dir/src/core/Game.cpp.o: \
- /home/l3v/repo/RoboArena/src/core/Game.cpp /usr/include/stdc-predef.h \
- /home/l3v/repo/RoboArena/include/core/Game.hpp \
- /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
- /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
- /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
- /usr/include/SFML/System/Time.hpp /usr/include/SFML/System/Err.hpp \
- /usr/include/c++/15/ostream /usr/include/c++/15/bits/requires_hosted.h \
+CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o: \
+ /home/l3v/repo/RoboArena/src/systems/CombatSystem.cpp \
+ /usr/include/stdc-predef.h \
+ /home/l3v/repo/RoboArena/include/systems/CombatSystem.hpp \
+ /usr/include/c++/15/cstddef \
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/os_defines.h \
@@ -15,20 +12,27 @@ CMakeFiles/roboarena_core.dir/src/core/Game.cpp.o: \
  /usr/include/gnu/stubs-64.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/cpu_defines.h \
  /usr/include/c++/15/pstl/pstl_config.h \
+ /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
+ /usr/include/c++/15/bits/version.h \
+ /home/l3v/repo/RoboArena/include/entities/Player.hpp \
+ /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
+ /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
+ /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
+ /usr/include/SFML/System/Time.hpp /usr/include/SFML/System/Err.hpp \
+ /usr/include/c++/15/ostream /usr/include/c++/15/bits/requires_hosted.h \
  /usr/include/c++/15/bits/ostream.h /usr/include/c++/15/ios \
  /usr/include/c++/15/iosfwd /usr/include/c++/15/bits/stringfwd.h \
  /usr/include/c++/15/bits/memoryfwd.h /usr/include/c++/15/bits/postypes.h \
  /usr/include/c++/15/cwchar /usr/include/wchar.h \
  /usr/include/bits/libc-header-start.h /usr/include/bits/floatn.h \
  /usr/include/bits/floatn-common.h \
- /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
  /usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h \
  /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
  /usr/include/bits/types/mbstate_t.h \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/c++/15/exception \
- /usr/include/c++/15/bits/exception.h /usr/include/c++/15/bits/version.h \
+ /usr/include/c++/15/bits/exception.h \
  /usr/include/c++/15/bits/exception_ptr.h \
  /usr/include/c++/15/bits/exception_defines.h \
  /usr/include/c++/15/bits/cxxabi_init_exception.h \
@@ -121,7 +125,7 @@ CMakeFiles/roboarena_core.dir/src/core/Game.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/bits/types/error_t.h /usr/include/c++/15/bits/charconv.h \
  /usr/include/c++/15/bits/basic_string.tcc \
- /usr/include/c++/15/bits/memory_resource.h /usr/include/c++/15/cstddef \
+ /usr/include/c++/15/bits/memory_resource.h \
  /usr/include/c++/15/bits/uses_allocator.h \
  /usr/include/c++/15/bits/uses_allocator_args.h /usr/include/c++/15/tuple \
  /usr/include/c++/15/bits/locale_classes.tcc \
@@ -221,11 +225,9 @@ CMakeFiles/roboarena_core.dir/src/core/Game.cpp.o: \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/l3v/repo/RoboArena/include/entities/Player.hpp \
  /home/l3v/repo/RoboArena/include/entities/Entity.hpp \
  /home/l3v/repo/RoboArena/include/map/GridMap.hpp \
  /home/l3v/repo/RoboArena/include/map/Tile.hpp \
- /home/l3v/repo/RoboArena/include/systems/CombatSystem.hpp \
  /home/l3v/repo/RoboArena/include/systems/EntityManager.hpp \
  /usr/include/c++/15/memory \
  /usr/include/c++/15/bits/stl_raw_storage_iter.h \
@@ -240,18 +242,5 @@ CMakeFiles/roboarena_core.dir/src/core/Game.cpp.o: \
  /usr/include/c++/15/backward/auto_ptr.h \
  /usr/include/c++/15/pstl/glue_memory_defs.h /usr/include/c++/15/utility \
  /usr/include/c++/15/bits/stl_relops.h \
- /home/l3v/repo/RoboArena/include/entities/ChaserEnemy.hpp \
  /home/l3v/repo/RoboArena/include/entities/Enemy.hpp \
- /home/l3v/repo/RoboArena/include/systems/Pathfinder.hpp \
- /usr/include/c++/15/functional /usr/include/c++/15/bits/std_function.h \
- /usr/include/c++/15/unordered_map \
- /usr/include/c++/15/bits/unordered_map.h \
- /usr/include/c++/15/bits/hashtable.h \
- /usr/include/c++/15/bits/hashtable_policy.h \
- /usr/include/c++/15/bits/enable_special_members.h \
- /usr/include/c++/15/array /usr/include/c++/15/compare \
- /home/l3v/repo/RoboArena/include/entities/Projectile.hpp \
- /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp \
- /usr/include/c++/15/sstream /usr/include/c++/15/istream \
- /usr/include/c++/15/bits/istream.tcc \
- /usr/include/c++/15/bits/sstream.tcc
+ /home/l3v/repo/RoboArena/include/entities/Projectile.hpp

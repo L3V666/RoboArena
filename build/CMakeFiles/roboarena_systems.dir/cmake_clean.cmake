@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o"
+  "CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o.d"
   "CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o"
   "CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o.d"
   "libroboarena_systems.a"

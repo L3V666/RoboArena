@@ -1,5 +1,8 @@
 #include "entities/Player.hpp"
 
+#include <algorithm>
+#include <array>
+
 #include "math/VectorUtils.hpp"
 
 namespace roboarena {
@@ -13,7 +16,13 @@ Player::Player(sf::Vector2f startPosition) {
     shape_.setOutlineThickness(2.0F);
 }
 
-void Player::update(float deltaTime) { handleMovement(deltaTime); }
+void Player::update(float deltaTime) {
+    if (isDefeated()) {
+        return;
+    }
+
+    handleMovement(deltaTime);
+}
 
 void Player::draw(sf::RenderWindow& window) const { window.draw(shape_); }
 
@@ -21,7 +30,17 @@ sf::FloatRect Player::getBounds() const { return shape_.getGlobalBounds(); }
 
 void Player::setMap(const GridMap* map) { map_ = map; }
 
+void Player::takeDamage(int damage) {
+    health_ = std::max(0, health_ - std::max(0, damage));
+}
+
 sf::Vector2f Player::getPosition() const { return shape_.getPosition(); }
+
+int Player::getHealth() const { return health_; }
+
+int Player::getMaxHealth() const { return kMaxHealth; }
+
+bool Player::isDefeated() const { return health_ <= 0; }
 
 void Player::handleMovement(float deltaTime) {
     sf::Vector2f direction{0.0F, 0.0F};
@@ -57,13 +76,28 @@ bool Player::canMoveTo(sf::Vector2f nextPosition) const {
         return true;
     }
 
-    const sf::Vector2f left{nextPosition.x - kRadius, nextPosition.y};
-    const sf::Vector2f right{nextPosition.x + kRadius, nextPosition.y};
-    const sf::Vector2f top{nextPosition.x, nextPosition.y - kRadius};
-    const sf::Vector2f bottom{nextPosition.x, nextPosition.y + kRadius};
+    const float diagonalOffset = kRadius * 0.70710678F;
+    const std::array<sf::Vector2f, 8> checkPoints{
+        sf::Vector2f{nextPosition.x - kRadius, nextPosition.y},
+        sf::Vector2f{nextPosition.x + kRadius, nextPosition.y},
+        sf::Vector2f{nextPosition.x, nextPosition.y - kRadius},
+        sf::Vector2f{nextPosition.x, nextPosition.y + kRadius},
+        sf::Vector2f{nextPosition.x - diagonalOffset,
+                     nextPosition.y - diagonalOffset},
+        sf::Vector2f{nextPosition.x + diagonalOffset,
+                     nextPosition.y - diagonalOffset},
+        sf::Vector2f{nextPosition.x - diagonalOffset,
+                     nextPosition.y + diagonalOffset},
+        sf::Vector2f{nextPosition.x + diagonalOffset,
+                     nextPosition.y + diagonalOffset}};
 
-    return map_->isWalkablePixel(left) && map_->isWalkablePixel(right) &&
-           map_->isWalkablePixel(top) && map_->isWalkablePixel(bottom);
+    for (const sf::Vector2f point : checkPoints) {
+        if (!map_->isWalkablePixel(point)) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 }  // namespace roboarena

@@ -225,4 +225,5 @@ CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.o: \
  /home/l3v/repo/RoboArena/include/entities/Entity.hpp \
  /home/l3v/repo/RoboArena/include/map/GridMap.hpp \
  /home/l3v/repo/RoboArena/include/map/Tile.hpp \
- /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp
+ /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp \
+ /usr/include/c++/15/array /usr/include/c++/15/compare

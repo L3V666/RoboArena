@@ -22,9 +22,10 @@ class ChaserEnemy final : public Enemy {
     [[nodiscard]] sf::Vector2f getDesiredDirection() const override;
 
    private:
-    static constexpr float kRadius = 15.0F;
+    static constexpr float kRadius = 12.0F;
     static constexpr float kSpeed = 125.0F;
-    static constexpr float kWaypointSwitchDistance = 5.0F;
+    static constexpr int kHealth = 90;
+    static constexpr float kWaypointSwitchDistance = 10.0F;
 
     [[nodiscard]] sf::Vector2f getNextWaypoint() const;
 

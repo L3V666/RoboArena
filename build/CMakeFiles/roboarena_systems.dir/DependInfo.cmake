@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/l3v/repo/RoboArena/src/systems/CombatSystem.cpp" "CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o" "gcc" "CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o.d"
   "/home/l3v/repo/RoboArena/src/systems/EntityManager.cpp" "CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o" "gcc" "CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o.d"
   )
 

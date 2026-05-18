@@ -1,2 +1,2 @@
-/usr/bin/ar qc libroboarena_entities.a CMakeFiles/roboarena_entities.dir/src/entities/Entity.cpp.o CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.o CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.o CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o
+/usr/bin/ar qc libroboarena_entities.a CMakeFiles/roboarena_entities.dir/src/entities/Entity.cpp.o CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.o CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.o CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.o
 /usr/bin/ranlib libroboarena_entities.a

@@ -23,8 +23,12 @@ class EntityManager final {
     template <typename EntityType, typename... Args>
     EntityType& create(Args&&... args);
 
+    template <typename EntityType>
+    [[nodiscard]] std::vector<EntityType*> getAll();
+
     void updateAll(float deltaTime);
     void drawAll(sf::RenderWindow& window) const;
+    void removeDestroyed();
     void clear();
 
     [[nodiscard]] std::size_t size() const;
@@ -42,6 +46,22 @@ EntityType& EntityManager::create(Args&&... args) {
     EntityType& reference = *entity;
     entities_.push_back(std::move(entity));
     return reference;
+}
+
+template <typename EntityType>
+std::vector<EntityType*> EntityManager::getAll() {
+    static_assert(std::is_base_of_v<Entity, EntityType>,
+                  "EntityType must inherit from Entity");
+
+    std::vector<EntityType*> result;
+
+    for (const auto& entity : entities_) {
+        if (auto* typedEntity = dynamic_cast<EntityType*>(entity.get())) {
+            result.push_back(typedEntity);
+        }
+    }
+
+    return result;
 }
 
 }  // namespace roboarena

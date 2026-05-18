@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/roboarena_entities.dir/src/entities/Entity.cpp.o.d"
   "CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.o"
   "CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.o.d"
+  "CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.o"
+  "CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.o.d"
   "libroboarena_entities.a"
   "libroboarena_entities.pdb"
 )

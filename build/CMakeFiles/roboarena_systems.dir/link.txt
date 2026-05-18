@@ -1,2 +1,2 @@
-/usr/bin/ar qc libroboarena_systems.a CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o
+/usr/bin/ar qc libroboarena_systems.a CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o
 /usr/bin/ranlib libroboarena_systems.a

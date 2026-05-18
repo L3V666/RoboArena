@@ -327,6 +327,30 @@ src/entities/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.s
 .PHONY : src/entities/Player.cpp.s
 
+src/entities/Projectile.o: src/entities/Projectile.cpp.o
+.PHONY : src/entities/Projectile.o
+
+# target to build an object file
+src/entities/Projectile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.o
+.PHONY : src/entities/Projectile.cpp.o
+
+src/entities/Projectile.i: src/entities/Projectile.cpp.i
+.PHONY : src/entities/Projectile.i
+
+# target to preprocess a source file
+src/entities/Projectile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.i
+.PHONY : src/entities/Projectile.cpp.i
+
+src/entities/Projectile.s: src/entities/Projectile.cpp.s
+.PHONY : src/entities/Projectile.s
+
+# target to generate assembly for a file
+src/entities/Projectile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/Projectile.cpp.s
+.PHONY : src/entities/Projectile.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -398,6 +422,30 @@ src/math/VectorUtils.s: src/math/VectorUtils.cpp.s
 src/math/VectorUtils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_math.dir/build.make CMakeFiles/roboarena_math.dir/src/math/VectorUtils.cpp.s
 .PHONY : src/math/VectorUtils.cpp.s
+
+src/systems/CombatSystem.o: src/systems/CombatSystem.cpp.o
+.PHONY : src/systems/CombatSystem.o
+
+# target to build an object file
+src/systems/CombatSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.o
+.PHONY : src/systems/CombatSystem.cpp.o
+
+src/systems/CombatSystem.i: src/systems/CombatSystem.cpp.i
+.PHONY : src/systems/CombatSystem.i
+
+# target to preprocess a source file
+src/systems/CombatSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.i
+.PHONY : src/systems/CombatSystem.cpp.i
+
+src/systems/CombatSystem.s: src/systems/CombatSystem.cpp.s
+.PHONY : src/systems/CombatSystem.s
+
+# target to generate assembly for a file
+src/systems/CombatSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/CombatSystem.cpp.s
+.PHONY : src/systems/CombatSystem.cpp.s
 
 src/systems/EntityManager.o: src/systems/EntityManager.cpp.o
 .PHONY : src/systems/EntityManager.o
@@ -477,6 +525,9 @@ help:
 	@echo "... src/entities/Player.o"
 	@echo "... src/entities/Player.i"
 	@echo "... src/entities/Player.s"
+	@echo "... src/entities/Projectile.o"
+	@echo "... src/entities/Projectile.i"
+	@echo "... src/entities/Projectile.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -486,6 +537,9 @@ help:
 	@echo "... src/math/VectorUtils.o"
 	@echo "... src/math/VectorUtils.i"
 	@echo "... src/math/VectorUtils.s"
+	@echo "... src/systems/CombatSystem.o"
+	@echo "... src/systems/CombatSystem.i"
+	@echo "... src/systems/CombatSystem.s"
 	@echo "... src/systems/EntityManager.o"
 	@echo "... src/systems/EntityManager.i"
 	@echo "... src/systems/EntityManager.s"
