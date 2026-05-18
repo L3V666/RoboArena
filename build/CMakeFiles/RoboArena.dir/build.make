@@ -99,11 +99,12 @@ RoboArena: CMakeFiles/RoboArena.dir/compiler_depend.ts
 RoboArena: libroboarena_core.a
 RoboArena: libroboarena_systems.a
 RoboArena: libroboarena_entities.a
+RoboArena: libroboarena_math.a
+RoboArena: libroboarena_pathfinding.a
 RoboArena: libroboarena_map.a
 RoboArena: /usr/lib64/libsfml-graphics.so.2.6.2
 RoboArena: /usr/lib64/libsfml-window.so.2.6.2
 RoboArena: /usr/lib64/libsfml-system.so.2.6.2
-RoboArena: libroboarena_math.a
 RoboArena: CMakeFiles/RoboArena.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable RoboArena"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RoboArena.dir/link.txt --verbose=$(VERBOSE)

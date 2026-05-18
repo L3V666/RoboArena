@@ -6,11 +6,12 @@ RoboArena: \
   libroboarena_core.a \
   libroboarena_systems.a \
   libroboarena_entities.a \
+  libroboarena_math.a \
+  libroboarena_pathfinding.a \
   libroboarena_map.a \
   /usr/lib64/libsfml-graphics.so.2.6.2 \
   /usr/lib64/libsfml-window.so.2.6.2 \
   /usr/lib64/libsfml-system.so.2.6.2 \
-  libroboarena_math.a \
   /usr/lib/gcc/x86_64-redhat-linux/15/libstdc++.so \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/libm.so \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/libm.so \
@@ -73,6 +74,10 @@ libroboarena_systems.a:
 
 libroboarena_entities.a:
 
+libroboarena_math.a:
+
+libroboarena_pathfinding.a:
+
 libroboarena_map.a:
 
 /usr/lib64/libsfml-graphics.so.2.6.2:
@@ -80,8 +85,6 @@ libroboarena_map.a:
 /usr/lib64/libsfml-window.so.2.6.2:
 
 /usr/lib64/libsfml-system.so.2.6.2:
-
-libroboarena_math.a:
 
 /usr/lib/gcc/x86_64-redhat-linux/15/libstdc++.so:
 

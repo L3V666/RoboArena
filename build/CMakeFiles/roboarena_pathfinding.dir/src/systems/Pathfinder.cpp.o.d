@@ -1,12 +1,9 @@
-CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o: \
- /home/l3v/repo/RoboArena/src/entities/ChaserEnemy.cpp \
+CMakeFiles/roboarena_pathfinding.dir/src/systems/Pathfinder.cpp.o: \
+ /home/l3v/repo/RoboArena/src/systems/Pathfinder.cpp \
  /usr/include/stdc-predef.h \
- /home/l3v/repo/RoboArena/include/entities/ChaserEnemy.hpp \
- /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
- /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
- /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
- /usr/include/SFML/System/Time.hpp /usr/include/SFML/System/Err.hpp \
- /usr/include/c++/15/ostream /usr/include/c++/15/bits/requires_hosted.h \
+ /home/l3v/repo/RoboArena/include/systems/Pathfinder.hpp \
+ /usr/include/SFML/System/Vector2.hpp \
+ /usr/include/SFML/System/Vector2.inl /usr/include/c++/15/cstddef \
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/os_defines.h \
@@ -16,26 +13,75 @@ CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o: \
  /usr/include/gnu/stubs-64.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/cpu_defines.h \
  /usr/include/c++/15/pstl/pstl_config.h \
- /usr/include/c++/15/bits/ostream.h /usr/include/c++/15/ios \
- /usr/include/c++/15/iosfwd /usr/include/c++/15/bits/stringfwd.h \
- /usr/include/c++/15/bits/memoryfwd.h /usr/include/c++/15/bits/postypes.h \
+ /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
+ /usr/include/c++/15/bits/version.h /usr/include/c++/15/functional \
+ /usr/include/c++/15/bits/stl_function.h /usr/include/c++/15/bits/move.h \
+ /usr/include/c++/15/type_traits /usr/include/c++/15/backward/binders.h \
+ /usr/include/c++/15/tuple /usr/include/c++/15/bits/stl_pair.h \
+ /usr/include/c++/15/bits/utility.h \
+ /usr/include/c++/15/bits/uses_allocator.h \
+ /usr/include/c++/15/bits/invoke.h \
+ /usr/include/c++/15/bits/functional_hash.h \
+ /usr/include/c++/15/bits/hash_bytes.h /usr/include/c++/15/bits/refwrap.h \
+ /usr/include/c++/15/bits/std_function.h /usr/include/c++/15/new \
+ /usr/include/c++/15/bits/exception.h /usr/include/c++/15/typeinfo \
+ /usr/include/c++/15/bits/functexcept.h \
+ /usr/include/c++/15/bits/exception_defines.h \
+ /usr/include/c++/15/unordered_map \
+ /usr/include/c++/15/bits/requires_hosted.h \
+ /usr/include/c++/15/initializer_list \
+ /usr/include/c++/15/bits/unordered_map.h \
+ /usr/include/c++/15/bits/hashtable.h \
+ /usr/include/c++/15/bits/hashtable_policy.h \
+ /usr/include/c++/15/bits/stl_algobase.h \
+ /usr/include/c++/15/bits/cpp_type_traits.h \
+ /usr/include/c++/15/ext/type_traits.h \
+ /usr/include/c++/15/ext/numeric_traits.h \
+ /usr/include/c++/15/bits/stl_iterator_base_types.h \
+ /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/15/bits/concept_check.h \
+ /usr/include/c++/15/debug/assertions.h \
+ /usr/include/c++/15/bits/stl_iterator.h \
+ /usr/include/c++/15/bits/ptr_traits.h /usr/include/c++/15/debug/debug.h \
+ /usr/include/c++/15/bits/predefined_ops.h /usr/include/c++/15/bit \
+ /usr/include/c++/15/concepts /usr/include/c++/15/ext/aligned_buffer.h \
+ /usr/include/c++/15/ext/alloc_traits.h \
+ /usr/include/c++/15/bits/alloc_traits.h \
+ /usr/include/c++/15/bits/stl_construct.h \
+ /usr/include/c++/15/bits/memoryfwd.h \
+ /usr/include/c++/15/bits/allocator.h \
+ /usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h \
+ /usr/include/c++/15/bits/new_allocator.h \
+ /usr/include/c++/15/bits/enable_special_members.h \
+ /usr/include/c++/15/bits/node_handle.h \
+ /usr/include/c++/15/bits/range_access.h \
+ /usr/include/c++/15/bits/erase_if.h \
+ /usr/include/c++/15/bits/memory_resource.h \
+ /usr/include/c++/15/bits/uses_allocator_args.h \
+ /usr/include/c++/15/vector /usr/include/c++/15/bits/stl_uninitialized.h \
+ /usr/include/c++/15/bits/stl_vector.h \
+ /usr/include/c++/15/bits/stl_bvector.h \
+ /usr/include/c++/15/bits/vector.tcc /usr/include/c++/15/array \
+ /usr/include/c++/15/compare \
+ /home/l3v/repo/RoboArena/include/map/GridMap.hpp \
+ /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
+ /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
+ /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
+ /usr/include/SFML/System/Time.hpp /usr/include/SFML/System/Err.hpp \
+ /usr/include/c++/15/ostream /usr/include/c++/15/bits/ostream.h \
+ /usr/include/c++/15/ios /usr/include/c++/15/iosfwd \
+ /usr/include/c++/15/bits/stringfwd.h /usr/include/c++/15/bits/postypes.h \
  /usr/include/c++/15/cwchar /usr/include/wchar.h \
  /usr/include/bits/libc-header-start.h /usr/include/bits/floatn.h \
  /usr/include/bits/floatn-common.h \
- /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h \
  /usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h \
  /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
  /usr/include/bits/types/mbstate_t.h \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/c++/15/exception \
- /usr/include/c++/15/bits/exception.h /usr/include/c++/15/bits/version.h \
  /usr/include/c++/15/bits/exception_ptr.h \
- /usr/include/c++/15/bits/exception_defines.h \
  /usr/include/c++/15/bits/cxxabi_init_exception.h \
- /usr/include/c++/15/typeinfo /usr/include/c++/15/bits/hash_bytes.h \
- /usr/include/c++/15/new /usr/include/c++/15/bits/move.h \
- /usr/include/c++/15/type_traits \
  /usr/include/c++/15/bits/nested_exception.h \
  /usr/include/c++/15/bits/char_traits.h \
  /usr/include/c++/15/bits/localefwd.h \
@@ -73,36 +119,9 @@ CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o: \
  /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h \
  /usr/include/sys/single_threaded.h \
  /usr/include/c++/15/bits/locale_classes.h /usr/include/c++/15/string \
- /usr/include/c++/15/bits/allocator.h \
- /usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h \
- /usr/include/c++/15/bits/new_allocator.h \
- /usr/include/c++/15/bits/functexcept.h \
- /usr/include/c++/15/bits/cpp_type_traits.h \
  /usr/include/c++/15/bits/ostream_insert.h \
  /usr/include/c++/15/bits/cxxabi_forced.h \
- /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/15/bits/concept_check.h \
- /usr/include/c++/15/debug/assertions.h \
- /usr/include/c++/15/bits/stl_iterator_base_types.h \
- /usr/include/c++/15/bits/stl_iterator.h \
- /usr/include/c++/15/ext/type_traits.h \
- /usr/include/c++/15/bits/ptr_traits.h \
- /usr/include/c++/15/bits/stl_function.h \
- /usr/include/c++/15/backward/binders.h \
- /usr/include/c++/15/ext/numeric_traits.h \
- /usr/include/c++/15/bits/stl_algobase.h \
- /usr/include/c++/15/bits/stl_pair.h /usr/include/c++/15/bits/utility.h \
- /usr/include/c++/15/debug/debug.h \
- /usr/include/c++/15/bits/predefined_ops.h /usr/include/c++/15/bit \
- /usr/include/c++/15/concepts /usr/include/c++/15/bits/refwrap.h \
- /usr/include/c++/15/bits/invoke.h \
- /usr/include/c++/15/bits/range_access.h \
- /usr/include/c++/15/initializer_list \
- /usr/include/c++/15/bits/basic_string.h \
- /usr/include/c++/15/ext/alloc_traits.h \
- /usr/include/c++/15/bits/alloc_traits.h \
- /usr/include/c++/15/bits/stl_construct.h /usr/include/c++/15/string_view \
- /usr/include/c++/15/bits/functional_hash.h \
+ /usr/include/c++/15/bits/basic_string.h /usr/include/c++/15/string_view \
  /usr/include/c++/15/bits/string_view.tcc \
  /usr/include/c++/15/ext/string_conversions.h /usr/include/c++/15/cstdlib \
  /usr/include/stdlib.h /usr/include/bits/waitflags.h \
@@ -122,9 +141,6 @@ CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/bits/types/error_t.h /usr/include/c++/15/bits/charconv.h \
  /usr/include/c++/15/bits/basic_string.tcc \
- /usr/include/c++/15/bits/memory_resource.h /usr/include/c++/15/cstddef \
- /usr/include/c++/15/bits/uses_allocator.h \
- /usr/include/c++/15/bits/uses_allocator_args.h /usr/include/c++/15/tuple \
  /usr/include/c++/15/bits/locale_classes.tcc \
  /usr/include/c++/15/system_error \
  /usr/include/c++/15/x86_64-redhat-linux/bits/error_constants.h \
@@ -165,8 +181,6 @@ CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o: \
  /usr/include/SFML/System/ThreadLocal.hpp \
  /usr/include/SFML/System/ThreadLocalPtr.hpp \
  /usr/include/SFML/System/ThreadLocalPtr.inl \
- /usr/include/SFML/System/Vector2.hpp \
- /usr/include/SFML/System/Vector2.inl \
  /usr/include/SFML/System/Vector3.hpp \
  /usr/include/SFML/System/Vector3.inl \
  /usr/include/SFML/Window/Clipboard.hpp \
@@ -177,11 +191,8 @@ CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o: \
  /usr/include/SFML/Window/Joystick.hpp \
  /usr/include/SFML/Window/Keyboard.hpp /usr/include/SFML/Window/Mouse.hpp \
  /usr/include/SFML/Window/Sensor.hpp /usr/include/SFML/Window/Touch.hpp \
- /usr/include/SFML/Window/VideoMode.hpp /usr/include/c++/15/vector \
- /usr/include/c++/15/bits/stl_uninitialized.h \
- /usr/include/c++/15/bits/stl_vector.h \
- /usr/include/c++/15/bits/stl_bvector.h \
- /usr/include/c++/15/bits/vector.tcc /usr/include/SFML/Window/Window.hpp \
+ /usr/include/SFML/Window/VideoMode.hpp \
+ /usr/include/SFML/Window/Window.hpp \
  /usr/include/SFML/Window/WindowBase.hpp \
  /usr/include/SFML/Window/Vulkan.hpp \
  /usr/include/SFML/Window/WindowHandle.hpp \
@@ -206,12 +217,8 @@ CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o: \
  /usr/include/SFML/Graphics/Font.hpp /usr/include/SFML/Graphics/Glyph.hpp \
  /usr/include/SFML/Graphics/Texture.hpp \
  /usr/include/SFML/Graphics/Image.hpp /usr/include/c++/15/map \
- /usr/include/c++/15/bits/stl_tree.h \
- /usr/include/c++/15/ext/aligned_buffer.h \
- /usr/include/c++/15/bits/node_handle.h \
- /usr/include/c++/15/bits/stl_map.h \
+ /usr/include/c++/15/bits/stl_tree.h /usr/include/c++/15/bits/stl_map.h \
  /usr/include/c++/15/bits/stl_multimap.h \
- /usr/include/c++/15/bits/erase_if.h \
  /usr/include/SFML/Graphics/RectangleShape.hpp \
  /usr/include/SFML/Graphics/RenderTarget.hpp \
  /usr/include/SFML/Graphics/View.hpp \
@@ -222,17 +229,25 @@ CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o: \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/l3v/repo/RoboArena/include/entities/Enemy.hpp \
- /home/l3v/repo/RoboArena/include/entities/Entity.hpp \
- /home/l3v/repo/RoboArena/include/map/GridMap.hpp \
- /home/l3v/repo/RoboArena/include/map/Tile.hpp \
- /home/l3v/repo/RoboArena/include/entities/Player.hpp \
- /home/l3v/repo/RoboArena/include/systems/Pathfinder.hpp \
- /usr/include/c++/15/functional /usr/include/c++/15/bits/std_function.h \
- /usr/include/c++/15/unordered_map \
- /usr/include/c++/15/bits/unordered_map.h \
- /usr/include/c++/15/bits/hashtable.h \
- /usr/include/c++/15/bits/hashtable_policy.h \
- /usr/include/c++/15/bits/enable_special_members.h \
- /usr/include/c++/15/array /usr/include/c++/15/compare \
- /home/l3v/repo/RoboArena/include/math/VectorUtils.hpp
+ /home/l3v/repo/RoboArena/include/map/Tile.hpp /usr/include/c++/15/cmath \
+ /usr/include/math.h /usr/include/bits/math-vector.h \
+ /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
+ /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
+ /usr/include/bits/mathcalls-helper-functions.h \
+ /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
+ /usr/include/bits/iscanonical.h /usr/include/c++/15/bits/specfun.h \
+ /usr/include/c++/15/limits /usr/include/c++/15/tr1/gamma.tcc \
+ /usr/include/c++/15/tr1/special_function_util.h \
+ /usr/include/c++/15/tr1/bessel_function.tcc \
+ /usr/include/c++/15/tr1/beta_function.tcc \
+ /usr/include/c++/15/tr1/ell_integral.tcc \
+ /usr/include/c++/15/tr1/exp_integral.tcc \
+ /usr/include/c++/15/tr1/hypergeometric.tcc \
+ /usr/include/c++/15/tr1/legendre_function.tcc \
+ /usr/include/c++/15/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/15/tr1/poly_hermite.tcc \
+ /usr/include/c++/15/tr1/poly_laguerre.tcc \
+ /usr/include/c++/15/tr1/riemann_zeta.tcc /usr/include/c++/15/queue \
+ /usr/include/c++/15/deque /usr/include/c++/15/bits/stl_deque.h \
+ /usr/include/c++/15/bits/deque.tcc /usr/include/c++/15/bits/stl_queue.h

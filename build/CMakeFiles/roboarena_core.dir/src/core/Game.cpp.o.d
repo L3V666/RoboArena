@@ -240,4 +240,12 @@ CMakeFiles/roboarena_core.dir/src/core/Game.cpp.o: \
  /usr/include/c++/15/pstl/glue_memory_defs.h /usr/include/c++/15/utility \
  /usr/include/c++/15/bits/stl_relops.h \
  /home/l3v/repo/RoboArena/include/entities/ChaserEnemy.hpp \
- /home/l3v/repo/RoboArena/include/entities/Enemy.hpp
+ /home/l3v/repo/RoboArena/include/entities/Enemy.hpp \
+ /home/l3v/repo/RoboArena/include/systems/Pathfinder.hpp \
+ /usr/include/c++/15/functional /usr/include/c++/15/bits/std_function.h \
+ /usr/include/c++/15/unordered_map \
+ /usr/include/c++/15/bits/unordered_map.h \
+ /usr/include/c++/15/bits/hashtable.h \
+ /usr/include/c++/15/bits/hashtable_policy.h \
+ /usr/include/c++/15/bits/enable_special_members.h \
+ /usr/include/c++/15/array /usr/include/c++/15/compare

@@ -1,5 +1,6 @@
 /home/l3v/repo/RoboArena/build/CMakeFiles/roboarena_math.dir
 /home/l3v/repo/RoboArena/build/CMakeFiles/roboarena_map.dir
+/home/l3v/repo/RoboArena/build/CMakeFiles/roboarena_pathfinding.dir
 /home/l3v/repo/RoboArena/build/CMakeFiles/roboarena_entities.dir
 /home/l3v/repo/RoboArena/build/CMakeFiles/roboarena_systems.dir
 /home/l3v/repo/RoboArena/build/CMakeFiles/roboarena_core.dir

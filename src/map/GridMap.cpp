@@ -40,18 +40,37 @@ bool GridMap::isWalkablePixel(sf::Vector2f position) const {
         return false;
     }
 
-    const auto cellX =
-        static_cast<std::size_t>(std::floor(position.x / tileSize_));
-    const auto cellY =
-        static_cast<std::size_t>(std::floor(position.y / tileSize_));
-
-    return getTile(cellX, cellY).isWalkable();
+    return isWalkableCell(worldToCell(position));
 }
 
 bool GridMap::isInsidePixel(sf::Vector2f position) const {
     return position.x >= 0.0F && position.y >= 0.0F &&
            position.x < static_cast<float>(width_) * tileSize_ &&
            position.y < static_cast<float>(height_) * tileSize_;
+}
+
+bool GridMap::isWalkableCell(sf::Vector2i cell) const {
+    if (!isInsideCell(cell)) {
+        return false;
+    }
+
+    return getTile(static_cast<std::size_t>(cell.x),
+                   static_cast<std::size_t>(cell.y))
+        .isWalkable();
+}
+
+bool GridMap::isInsideCell(sf::Vector2i cell) const {
+    return isInsideCell(cell.x, cell.y);
+}
+
+sf::Vector2i GridMap::worldToCell(sf::Vector2f position) const {
+    return {static_cast<int>(std::floor(position.x / tileSize_)),
+            static_cast<int>(std::floor(position.y / tileSize_))};
+}
+
+sf::Vector2f GridMap::cellToWorld(sf::Vector2i cell) const {
+    return {(static_cast<float>(cell.x) + 0.5F) * tileSize_,
+            (static_cast<float>(cell.y) + 0.5F) * tileSize_};
 }
 
 float GridMap::getTileSize() const { return tileSize_; }

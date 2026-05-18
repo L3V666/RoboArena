@@ -143,6 +143,19 @@ roboarena_map/fast:
 .PHONY : roboarena_map/fast
 
 #=============================================================================
+# Target rules for targets named roboarena_pathfinding
+
+# Build rule for target.
+roboarena_pathfinding: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 roboarena_pathfinding
+.PHONY : roboarena_pathfinding
+
+# fast build rule for target.
+roboarena_pathfinding/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_pathfinding.dir/build.make CMakeFiles/roboarena_pathfinding.dir/build
+.PHONY : roboarena_pathfinding/fast
+
+#=============================================================================
 # Target rules for targets named roboarena_entities
 
 # Build rule for target.
@@ -410,6 +423,30 @@ src/systems/EntityManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.s
 .PHONY : src/systems/EntityManager.cpp.s
 
+src/systems/Pathfinder.o: src/systems/Pathfinder.cpp.o
+.PHONY : src/systems/Pathfinder.o
+
+# target to build an object file
+src/systems/Pathfinder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_pathfinding.dir/build.make CMakeFiles/roboarena_pathfinding.dir/src/systems/Pathfinder.cpp.o
+.PHONY : src/systems/Pathfinder.cpp.o
+
+src/systems/Pathfinder.i: src/systems/Pathfinder.cpp.i
+.PHONY : src/systems/Pathfinder.i
+
+# target to preprocess a source file
+src/systems/Pathfinder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_pathfinding.dir/build.make CMakeFiles/roboarena_pathfinding.dir/src/systems/Pathfinder.cpp.i
+.PHONY : src/systems/Pathfinder.cpp.i
+
+src/systems/Pathfinder.s: src/systems/Pathfinder.cpp.s
+.PHONY : src/systems/Pathfinder.s
+
+# target to generate assembly for a file
+src/systems/Pathfinder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_pathfinding.dir/build.make CMakeFiles/roboarena_pathfinding.dir/src/systems/Pathfinder.cpp.s
+.PHONY : src/systems/Pathfinder.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -423,6 +460,7 @@ help:
 	@echo "... roboarena_entities"
 	@echo "... roboarena_map"
 	@echo "... roboarena_math"
+	@echo "... roboarena_pathfinding"
 	@echo "... roboarena_systems"
 	@echo "... src/core/Game.o"
 	@echo "... src/core/Game.i"
@@ -451,6 +489,9 @@ help:
 	@echo "... src/systems/EntityManager.o"
 	@echo "... src/systems/EntityManager.i"
 	@echo "... src/systems/EntityManager.s"
+	@echo "... src/systems/Pathfinder.o"
+	@echo "... src/systems/Pathfinder.i"
+	@echo "... src/systems/Pathfinder.s"
 .PHONY : help
 
 

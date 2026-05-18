@@ -17,6 +17,10 @@ class GridMap final {
 
     [[nodiscard]] bool isWalkablePixel(sf::Vector2f position) const;
     [[nodiscard]] bool isInsidePixel(sf::Vector2f position) const;
+    [[nodiscard]] bool isWalkableCell(sf::Vector2i cell) const;
+    [[nodiscard]] bool isInsideCell(sf::Vector2i cell) const;
+    [[nodiscard]] sf::Vector2i worldToCell(sf::Vector2f position) const;
+    [[nodiscard]] sf::Vector2f cellToWorld(sf::Vector2i cell) const;
     [[nodiscard]] float getTileSize() const;
     [[nodiscard]] std::size_t getWidth() const;
     [[nodiscard]] std::size_t getHeight() const;
