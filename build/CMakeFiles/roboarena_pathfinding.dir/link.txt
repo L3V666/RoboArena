@@ -1,2 +1,0 @@
-/usr/bin/ar qc libroboarena_pathfinding.a CMakeFiles/roboarena_pathfinding.dir/src/systems/Pathfinder.cpp.o
-/usr/bin/ranlib libroboarena_pathfinding.a

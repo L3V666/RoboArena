@@ -1,2 +1,0 @@
-/usr/bin/ar qc libroboarena_map.a CMakeFiles/roboarena_map.dir/src/map/GridMap.cpp.o
-/usr/bin/ranlib libroboarena_map.a
