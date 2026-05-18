@@ -1,0 +1,2 @@
+/usr/bin/ar qc libroboarena_math.a CMakeFiles/roboarena_math.dir/src/math/VectorUtils.cpp.o
+/usr/bin/ranlib libroboarena_math.a

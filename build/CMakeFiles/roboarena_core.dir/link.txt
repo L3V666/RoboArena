@@ -1,0 +1,2 @@
+/usr/bin/ar qc libroboarena_core.a CMakeFiles/roboarena_core.dir/src/core/Game.cpp.o
+/usr/bin/ranlib libroboarena_core.a
