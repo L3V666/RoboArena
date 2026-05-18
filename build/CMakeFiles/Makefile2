@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/l3v/repo/RoboArena/build
 all: CMakeFiles/roboarena_math.dir/all
 all: CMakeFiles/roboarena_map.dir/all
 all: CMakeFiles/roboarena_entities.dir/all
+all: CMakeFiles/roboarena_systems.dir/all
 all: CMakeFiles/roboarena_core.dir/all
 all: CMakeFiles/RoboArena.dir/all
 .PHONY : all
@@ -74,6 +75,7 @@ all: CMakeFiles/RoboArena.dir/all
 codegen: CMakeFiles/roboarena_math.dir/codegen
 codegen: CMakeFiles/roboarena_map.dir/codegen
 codegen: CMakeFiles/roboarena_entities.dir/codegen
+codegen: CMakeFiles/roboarena_systems.dir/codegen
 codegen: CMakeFiles/roboarena_core.dir/codegen
 codegen: CMakeFiles/RoboArena.dir/codegen
 .PHONY : codegen
@@ -86,6 +88,7 @@ preinstall:
 clean: CMakeFiles/roboarena_math.dir/clean
 clean: CMakeFiles/roboarena_map.dir/clean
 clean: CMakeFiles/roboarena_entities.dir/clean
+clean: CMakeFiles/roboarena_systems.dir/clean
 clean: CMakeFiles/roboarena_core.dir/clean
 clean: CMakeFiles/RoboArena.dir/clean
 .PHONY : clean
@@ -97,7 +100,7 @@ clean: CMakeFiles/RoboArena.dir/clean
 CMakeFiles/roboarena_math.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_math.dir/build.make CMakeFiles/roboarena_math.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_math.dir/build.make CMakeFiles/roboarena_math.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=10,11 "Built target roboarena_math"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=12,13 "Built target roboarena_math"
 .PHONY : CMakeFiles/roboarena_math.dir/all
 
 # Build rule for subdir invocation for target.
@@ -114,7 +117,7 @@ roboarena_math: CMakeFiles/roboarena_math.dir/rule
 # codegen rule for target.
 CMakeFiles/roboarena_math.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_math.dir/build.make CMakeFiles/roboarena_math.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=10,11 "Finished codegen for target roboarena_math"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=12,13 "Finished codegen for target roboarena_math"
 .PHONY : CMakeFiles/roboarena_math.dir/codegen
 
 # clean rule for target.
@@ -129,7 +132,7 @@ CMakeFiles/roboarena_math.dir/clean:
 CMakeFiles/roboarena_map.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_map.dir/build.make CMakeFiles/roboarena_map.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_map.dir/build.make CMakeFiles/roboarena_map.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=8,9 "Built target roboarena_map"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=10,11 "Built target roboarena_map"
 .PHONY : CMakeFiles/roboarena_map.dir/all
 
 # Build rule for subdir invocation for target.
@@ -146,7 +149,7 @@ roboarena_map: CMakeFiles/roboarena_map.dir/rule
 # codegen rule for target.
 CMakeFiles/roboarena_map.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_map.dir/build.make CMakeFiles/roboarena_map.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=8,9 "Finished codegen for target roboarena_map"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=10,11 "Finished codegen for target roboarena_map"
 .PHONY : CMakeFiles/roboarena_map.dir/codegen
 
 # clean rule for target.
@@ -162,12 +165,12 @@ CMakeFiles/roboarena_entities.dir/all: CMakeFiles/roboarena_math.dir/all
 CMakeFiles/roboarena_entities.dir/all: CMakeFiles/roboarena_map.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=5,6,7 "Built target roboarena_entities"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=5,6,7,8,9 "Built target roboarena_entities"
 .PHONY : CMakeFiles/roboarena_entities.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/roboarena_entities.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roboarena_entities.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 0
 .PHONY : CMakeFiles/roboarena_entities.dir/rule
@@ -179,7 +182,7 @@ roboarena_entities: CMakeFiles/roboarena_entities.dir/rule
 # codegen rule for target.
 CMakeFiles/roboarena_entities.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=5,6,7 "Finished codegen for target roboarena_entities"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=5,6,7,8,9 "Finished codegen for target roboarena_entities"
 .PHONY : CMakeFiles/roboarena_entities.dir/codegen
 
 # clean rule for target.
@@ -188,12 +191,47 @@ CMakeFiles/roboarena_entities.dir/clean:
 .PHONY : CMakeFiles/roboarena_entities.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/roboarena_systems.dir
+
+# All Build rule for target.
+CMakeFiles/roboarena_systems.dir/all: CMakeFiles/roboarena_entities.dir/all
+CMakeFiles/roboarena_systems.dir/all: CMakeFiles/roboarena_math.dir/all
+CMakeFiles/roboarena_systems.dir/all: CMakeFiles/roboarena_map.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=14,15 "Built target roboarena_systems"
+.PHONY : CMakeFiles/roboarena_systems.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/roboarena_systems.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roboarena_systems.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 0
+.PHONY : CMakeFiles/roboarena_systems.dir/rule
+
+# Convenience name for target.
+roboarena_systems: CMakeFiles/roboarena_systems.dir/rule
+.PHONY : roboarena_systems
+
+# codegen rule for target.
+CMakeFiles/roboarena_systems.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=14,15 "Finished codegen for target roboarena_systems"
+.PHONY : CMakeFiles/roboarena_systems.dir/codegen
+
+# clean rule for target.
+CMakeFiles/roboarena_systems.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/clean
+.PHONY : CMakeFiles/roboarena_systems.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/roboarena_core.dir
 
 # All Build rule for target.
+CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_entities.dir/all
+CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_systems.dir/all
 CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_math.dir/all
 CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_map.dir/all
-CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_entities.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_core.dir/build.make CMakeFiles/roboarena_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_core.dir/build.make CMakeFiles/roboarena_core.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=3,4 "Built target roboarena_core"
@@ -201,7 +239,7 @@ CMakeFiles/roboarena_core.dir/all: CMakeFiles/roboarena_entities.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/roboarena_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roboarena_core.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 0
 .PHONY : CMakeFiles/roboarena_core.dir/rule
@@ -225,10 +263,11 @@ CMakeFiles/roboarena_core.dir/clean:
 # Target rules for target CMakeFiles/RoboArena.dir
 
 # All Build rule for target.
+CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_entities.dir/all
+CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_systems.dir/all
+CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_core.dir/all
 CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_math.dir/all
 CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_map.dir/all
-CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_entities.dir/all
-CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RoboArena.dir/build.make CMakeFiles/RoboArena.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RoboArena.dir/build.make CMakeFiles/RoboArena.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/l3v/repo/RoboArena/build/CMakeFiles --progress-num=1,2 "Built target RoboArena"
@@ -236,7 +275,7 @@ CMakeFiles/RoboArena.dir/all: CMakeFiles/roboarena_core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RoboArena.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/RoboArena.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3v/repo/RoboArena/build/CMakeFiles 0
 .PHONY : CMakeFiles/RoboArena.dir/rule

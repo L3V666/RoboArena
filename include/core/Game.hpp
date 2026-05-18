@@ -5,6 +5,7 @@
 
 #include "entities/Player.hpp"
 #include "map/GridMap.hpp"
+#include "systems/EntityManager.hpp"
 
 namespace roboarena {
 
@@ -22,10 +23,12 @@ class Game final {
     void processEvents();
     void update(float deltaTime);
     void render();
+    void createEntities();
 
     sf::RenderWindow window_;
     GridMap map_;
-    Player player_;
+    EntityManager entityManager_;
+    Player* player_ = nullptr;
 };
 
 }  // namespace roboarena

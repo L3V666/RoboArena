@@ -120,6 +120,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/roboarena_math.dir/DependInfo.cmake"
   "CMakeFiles/roboarena_map.dir/DependInfo.cmake"
   "CMakeFiles/roboarena_entities.dir/DependInfo.cmake"
+  "CMakeFiles/roboarena_systems.dir/DependInfo.cmake"
   "CMakeFiles/roboarena_core.dir/DependInfo.cmake"
   "CMakeFiles/RoboArena.dir/DependInfo.cmake"
   )

@@ -18,4 +18,4 @@ sf::Vector2f normalized(sf::Vector2f vector) {
     return {vector.x / vectorLength, vector.y / vectorLength};
 }
 
-} // namespace roboarena::math
+}  // namespace roboarena::math

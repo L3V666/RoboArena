@@ -1,6 +1,6 @@
 # RoboArena
 
-RoboArena — 2D-игра на C++ и SFML. Игрок управляет роботом на арене, а в следующих этапах появятся враги, поиск пути A*, снаряды, бонусы и интерфейс.
+RoboArena — 2D-игра на C++ и SFML. Игрок управляет роботом на арене, а враги преследуют его. В следующих этапах появятся поиск пути A*, снаряды, бонусы и интерфейс.
 
 ## Технологии
 
@@ -19,8 +19,6 @@ cmake ..
 cmake --build .
 ./RoboArena
 ```
-
-На Windows исполняемый файл может лежать в `build/Debug` или `build/Release`.
 
 ## Управление
 
@@ -45,3 +43,14 @@ cmake --build .
 git add .
 git commit -m "Add SFML game loop and player movement"
 ```
+
+## Этап 2
+
+Сделано:
+
+- добавлен `EntityManager`;
+- игровые объекты теперь хранятся в `std::vector<std::unique_ptr<Entity>>`;
+- добавлен абстрактный класс `Enemy`;
+- добавлен `ChaserEnemy`, который преследует игрока;
+- использованы `std::move`, `std::make_unique`, range-based for, `final`, `override`, `const`;
+- добавлен осмысленный шаблонный метод `EntityManager::create<T>()`.

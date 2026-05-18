@@ -1,6 +1,7 @@
-CMakeFiles/RoboArena.dir/src/main.cpp.o: \
- /home/l3v/repo/RoboArena/src/main.cpp /usr/include/stdc-predef.h \
- /home/l3v/repo/RoboArena/include/core/Game.hpp \
+CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o: \
+ /home/l3v/repo/RoboArena/src/systems/EntityManager.cpp \
+ /usr/include/stdc-predef.h \
+ /home/l3v/repo/RoboArena/include/systems/EntityManager.hpp \
  /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
  /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
  /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
@@ -220,13 +221,7 @@ CMakeFiles/RoboArena.dir/src/main.cpp.o: \
  /usr/include/SFML/Graphics/Glsl.hpp /usr/include/SFML/Graphics/Glsl.inl \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
- /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/l3v/repo/RoboArena/include/entities/Player.hpp \
- /home/l3v/repo/RoboArena/include/entities/Entity.hpp \
- /home/l3v/repo/RoboArena/include/map/GridMap.hpp \
- /home/l3v/repo/RoboArena/include/map/Tile.hpp \
- /home/l3v/repo/RoboArena/include/systems/EntityManager.hpp \
- /usr/include/c++/15/memory \
+ /usr/include/SFML/Graphics/VertexBuffer.hpp /usr/include/c++/15/memory \
  /usr/include/c++/15/bits/stl_raw_storage_iter.h \
  /usr/include/c++/15/bits/align.h /usr/include/c++/15/bits/unique_ptr.h \
  /usr/include/c++/15/bits/shared_ptr.h \
@@ -238,4 +233,5 @@ CMakeFiles/RoboArena.dir/src/main.cpp.o: \
  /usr/include/c++/15/bits/atomic_lockfree_defines.h \
  /usr/include/c++/15/backward/auto_ptr.h \
  /usr/include/c++/15/pstl/glue_memory_defs.h /usr/include/c++/15/utility \
- /usr/include/c++/15/bits/stl_relops.h
+ /usr/include/c++/15/bits/stl_relops.h \
+ /home/l3v/repo/RoboArena/include/entities/Entity.hpp

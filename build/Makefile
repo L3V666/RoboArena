@@ -156,6 +156,19 @@ roboarena_entities/fast:
 .PHONY : roboarena_entities/fast
 
 #=============================================================================
+# Target rules for targets named roboarena_systems
+
+# Build rule for target.
+roboarena_systems: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 roboarena_systems
+.PHONY : roboarena_systems
+
+# fast build rule for target.
+roboarena_systems/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/build
+.PHONY : roboarena_systems/fast
+
+#=============================================================================
 # Target rules for targets named roboarena_core
 
 # Build rule for target.
@@ -204,6 +217,54 @@ src/core/Game.s: src/core/Game.cpp.s
 src/core/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_core.dir/build.make CMakeFiles/roboarena_core.dir/src/core/Game.cpp.s
 .PHONY : src/core/Game.cpp.s
+
+src/entities/ChaserEnemy.o: src/entities/ChaserEnemy.cpp.o
+.PHONY : src/entities/ChaserEnemy.o
+
+# target to build an object file
+src/entities/ChaserEnemy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o
+.PHONY : src/entities/ChaserEnemy.cpp.o
+
+src/entities/ChaserEnemy.i: src/entities/ChaserEnemy.cpp.i
+.PHONY : src/entities/ChaserEnemy.i
+
+# target to preprocess a source file
+src/entities/ChaserEnemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.i
+.PHONY : src/entities/ChaserEnemy.cpp.i
+
+src/entities/ChaserEnemy.s: src/entities/ChaserEnemy.cpp.s
+.PHONY : src/entities/ChaserEnemy.s
+
+# target to generate assembly for a file
+src/entities/ChaserEnemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.s
+.PHONY : src/entities/ChaserEnemy.cpp.s
+
+src/entities/Enemy.o: src/entities/Enemy.cpp.o
+.PHONY : src/entities/Enemy.o
+
+# target to build an object file
+src/entities/Enemy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.o
+.PHONY : src/entities/Enemy.cpp.o
+
+src/entities/Enemy.i: src/entities/Enemy.cpp.i
+.PHONY : src/entities/Enemy.i
+
+# target to preprocess a source file
+src/entities/Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.i
+.PHONY : src/entities/Enemy.cpp.i
+
+src/entities/Enemy.s: src/entities/Enemy.cpp.s
+.PHONY : src/entities/Enemy.s
+
+# target to generate assembly for a file
+src/entities/Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_entities.dir/build.make CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.s
+.PHONY : src/entities/Enemy.cpp.s
 
 src/entities/Entity.o: src/entities/Entity.cpp.o
 .PHONY : src/entities/Entity.o
@@ -325,6 +386,30 @@ src/math/VectorUtils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_math.dir/build.make CMakeFiles/roboarena_math.dir/src/math/VectorUtils.cpp.s
 .PHONY : src/math/VectorUtils.cpp.s
 
+src/systems/EntityManager.o: src/systems/EntityManager.cpp.o
+.PHONY : src/systems/EntityManager.o
+
+# target to build an object file
+src/systems/EntityManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.o
+.PHONY : src/systems/EntityManager.cpp.o
+
+src/systems/EntityManager.i: src/systems/EntityManager.cpp.i
+.PHONY : src/systems/EntityManager.i
+
+# target to preprocess a source file
+src/systems/EntityManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.i
+.PHONY : src/systems/EntityManager.cpp.i
+
+src/systems/EntityManager.s: src/systems/EntityManager.cpp.s
+.PHONY : src/systems/EntityManager.s
+
+# target to generate assembly for a file
+src/systems/EntityManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roboarena_systems.dir/build.make CMakeFiles/roboarena_systems.dir/src/systems/EntityManager.cpp.s
+.PHONY : src/systems/EntityManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -338,9 +423,16 @@ help:
 	@echo "... roboarena_entities"
 	@echo "... roboarena_map"
 	@echo "... roboarena_math"
+	@echo "... roboarena_systems"
 	@echo "... src/core/Game.o"
 	@echo "... src/core/Game.i"
 	@echo "... src/core/Game.s"
+	@echo "... src/entities/ChaserEnemy.o"
+	@echo "... src/entities/ChaserEnemy.i"
+	@echo "... src/entities/ChaserEnemy.s"
+	@echo "... src/entities/Enemy.o"
+	@echo "... src/entities/Enemy.i"
+	@echo "... src/entities/Enemy.s"
 	@echo "... src/entities/Entity.o"
 	@echo "... src/entities/Entity.i"
 	@echo "... src/entities/Entity.s"
@@ -356,6 +448,9 @@ help:
 	@echo "... src/math/VectorUtils.o"
 	@echo "... src/math/VectorUtils.i"
 	@echo "... src/math/VectorUtils.s"
+	@echo "... src/systems/EntityManager.o"
+	@echo "... src/systems/EntityManager.i"
+	@echo "... src/systems/EntityManager.s"
 .PHONY : help
 
 

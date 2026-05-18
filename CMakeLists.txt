@@ -30,17 +30,26 @@ target_link_libraries(roboarena_map PUBLIC sfml-graphics)
 add_library(roboarena_entities
     src/entities/Entity.cpp
     src/entities/Player.cpp
+    src/entities/Enemy.cpp
+    src/entities/ChaserEnemy.cpp
 )
 
 target_include_directories(roboarena_entities PUBLIC include)
 target_link_libraries(roboarena_entities PUBLIC sfml-graphics roboarena_math roboarena_map)
+
+add_library(roboarena_systems
+    src/systems/EntityManager.cpp
+)
+
+target_include_directories(roboarena_systems PUBLIC include)
+target_link_libraries(roboarena_systems PUBLIC sfml-graphics roboarena_entities)
 
 add_library(roboarena_core
     src/core/Game.cpp
 )
 
 target_include_directories(roboarena_core PUBLIC include)
-target_link_libraries(roboarena_core PUBLIC sfml-graphics sfml-window sfml-system roboarena_entities roboarena_map)
+target_link_libraries(roboarena_core PUBLIC sfml-graphics sfml-window sfml-system roboarena_entities roboarena_map roboarena_systems)
 
 add_executable(RoboArena
     src/main.cpp

@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o"
+  "CMakeFiles/roboarena_entities.dir/src/entities/ChaserEnemy.cpp.o.d"
+  "CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.o"
+  "CMakeFiles/roboarena_entities.dir/src/entities/Enemy.cpp.o.d"
   "CMakeFiles/roboarena_entities.dir/src/entities/Entity.cpp.o"
   "CMakeFiles/roboarena_entities.dir/src/entities/Entity.cpp.o.d"
   "CMakeFiles/roboarena_entities.dir/src/entities/Player.cpp.o"
